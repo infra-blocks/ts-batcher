@@ -1,6 +1,6 @@
 {
   "name": "@infra-blocks/bather",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Event based batching utility.",
   "keywords": [
     "event",
