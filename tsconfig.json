@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "module": "nodenext",
+    "outDir": "./lib/compile",
+    "strict": true,
+    "target": "esnext",
+    "lib": ["esnext"],
+    "noEmit": true,
+    "incremental": true
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.js",
+    "**/*.cjs",
+    "**/*.mjs",
+    "**/*.json",
+    "**/.eslintrc.cjs",
+    "**/.mocharc.cjs"
+  ],
+  "exclude": ["lib/**/*"]
+}
