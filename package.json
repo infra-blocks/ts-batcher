@@ -57,7 +57,7 @@
     "node": ">=22.0.0"
   },
   "dependencies": {
-    "@infra-blocks/emitter": "^0.1.0",
+    "@infra-blocks/emitter": "^0.2.1",
     "@infra-blocks/timer": "^0.2.0"
   }
 }
