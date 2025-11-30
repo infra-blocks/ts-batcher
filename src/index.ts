@@ -1,4 +1,8 @@
-import { EmitterLikeBase } from "@infra-blocks/emitter";
+import {
+  type AlwaysVoid,
+  Emitter,
+  EmitterLikeBase,
+} from "@infra-blocks/emitter";
 import { timer } from "@infra-blocks/timer";
 import type { Predicate } from "@infra-blocks/types";
 
@@ -59,11 +63,14 @@ export type BatcherEvents<T> = {
  *
  * @see BatcherEvents
  */
-export class Batcher<T> extends EmitterLikeBase<BatcherEvents<T>> {
+export class Batcher<T> extends EmitterLikeBase<
+  BatcherEvents<T>,
+  AlwaysVoid<BatcherEvents<T>>
+> {
   private _items: T[];
 
   private constructor() {
-    super();
+    super({ emitter: Emitter.ignoringEach<BatcherEvents<T>>() });
     this._items = [];
   }
 
